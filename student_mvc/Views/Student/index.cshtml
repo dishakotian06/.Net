@@ -1,0 +1,31 @@
+﻿﻿@model List<student mvc.Models.Student>
+<h2>Student List</h2>
+<table>
+    <tr>
+        <th>USN</th>
+        <th>Mark1</th>
+        <th>Mark2</th>
+        <th>Mark3</th>
+    </tr>
+
+    @if (Model != null)
+    {
+
+
+        foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.USN</td>
+                <td>@p.Mark1</td>
+                <td>@p.Mark3</td>
+                
+            </tr>
+        }
+    }
+    else
+    {
+        <tr>
+            <td colspan="3">No data available</td>
+        </tr>
+    }
+</table>
